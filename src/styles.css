@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Dosis';
+  src: url('./assets/font/Dosis-VariableFont_wght.ttf');
+}
+
+h1,
+h2,
+small,
+input,
+input::placeholder,
+label,
+p {
+    font-family: 'Dosis';
+    font-size: larger;
+}
