@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-import { LoginService } from '../login.services';
-import { Clinic } from 'src/data/clinic/clinic';
+import { LoginService } from '../../services/login.services';
+import { Clinic } from 'src/app/modules/auth/models/class/clinic/clinic';
 import swal from 'sweetalert2';
 import { Router } from '@angular/router';
 
@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class SignUpComponent {
 
-  clinic: Clinic = new Clinic()  
+  clinic: Clinic = new Clinic()
 
   constructor(
     private loginService: LoginService,

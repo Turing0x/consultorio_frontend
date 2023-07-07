@@ -8,13 +8,14 @@ import { SettingsComponent } from './pages/settings/settings.component';
 import { DashboardComponent } from './dashboard.component';
 
 const routes: Routes = [
-  { 
+  {
     path: '' ,
     children: [
+      // angular interpreta las ruta de arriba pa abajo, como los midelware de tu back
+      { path: 'dashboard', component: DashboardComponent },
       { path: 'medical-staff', component: MedicalStaffComponent },
       { path: 'help-comp', component: HelpComponentComponent },
       { path: 'town-houses', component: TownHousesComponent },
-      { path: 'dashboard', component: DashboardComponent },
       { path: 'settings', component: SettingsComponent },
       { path: '**', redirectTo: 'dashboard' },
     ]

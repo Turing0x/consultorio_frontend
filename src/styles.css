@@ -1,6 +1,8 @@
-@font-face {
-  font-family: 'Dosis';
-  src: url('./assets/font/Dosis-VariableFont_wght.ttf');
+@import "assets/styles/DosisFont.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 h1,
@@ -11,6 +13,6 @@ span,
 input::placeholder,
 label,
 p {
-    font-family: 'Dosis';
+    font-family: 'Dosis','sans-serif';
     font-size: larger;
 }

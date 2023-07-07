@@ -1,0 +1,14 @@
+.main-layout{
+  display: flex;
+  flex-direction: row;
+
+  .main-content{
+    position: absolute;
+    width: calc(100% - 300px); /*no pongas esto en px ponlo en rem que se calcula con la base del font size de la app, por defecto en 16*/
+    left: 300px;
+    min-height: 100vh;
+    background: #fff;
+    transition: .5s;
+  }
+
+}
