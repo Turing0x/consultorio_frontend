@@ -19,7 +19,7 @@ export class SignInComponent {
     private loginService: LoginService,
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    private  authService: AuthService
+    private authService: AuthService
   ) {
   }
 
@@ -28,7 +28,6 @@ export class SignInComponent {
   }
 
   public makeLogin(): void {
-    this.authService.autenticated$.next(true);
     this.loginService.signIn(this.clinic).subscribe({
         next: success => {
 
@@ -44,7 +43,8 @@ export class SignInComponent {
           this.router.navigate(['/dashboard'],
             {relativeTo: this.activatedRoute})
 
-        }
+        },
+        error: () => this.authService.autenticated$.next(false)
       }
     )
   }
