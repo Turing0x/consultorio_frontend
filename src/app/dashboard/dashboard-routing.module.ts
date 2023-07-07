@@ -5,7 +5,7 @@ import { HelpComponentComponent } from './pages/help-component/help-component.co
 import { MedicalStaffComponent } from './pages/medical-staff/medical-staff.component';
 import { TownHousesComponent } from './pages/town-houses/town-houses.component';
 import { SettingsComponent } from './pages/settings/settings.component';
-import { DashboardComponent } from './parts/main/dashboard.component';
+import { DashboardComponent } from './dashboard.component';
 
 const routes: Routes = [
   { 
