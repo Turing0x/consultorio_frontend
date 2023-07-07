@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pagina de inicio</title>
+  <title>SignIn Page</title>
 </head>
 <body class="mainCnt" >
 
@@ -21,9 +21,8 @@
       
       <div class="featured-image mb-3">
       
-        <img class="img-fluid" 
-          [src]="whatSee ? '../../assets/images/login.jpg' 
-                         : '../../assets/images/signUp_page.png'" 
+        <img class="img-fluid"
+          src="../../../../assets/images/signin.jpg" 
           style="width: 500px;">
       
       </div>
@@ -36,17 +35,17 @@
     
       <div class="row align-items-center">
 
-        <div class = "d-grid gap-2 d-md-flex justify-content-md-end mb-3" *ngIf="whatSee else topText">
+        <div class = "d-grid gap-2 d-md-flex justify-content-md-end mb-3" >
           
           <p style="color: gray">No clinic yet?</p>
           
-          <button type="button" 
-            (click) = "whatSee = !whatSee" 
+          <button type="button"
+            (click) = "navigateTo('/auth/signup')"
             class="btn btn-outline-primary rounded-4 btn-sm mb-3">Create clinic</button>
         
         </div>
 
-        <div class = "container" *ngIf="whatSee else changeWhatSee" >
+        <div class = "container" >
 
           <div class="header-text mb-2">
             <h2>Welcome back!</h2>
@@ -114,66 +113,6 @@
     </div>
   
   </div>
-
-  <ng-template #changeWhatSee >
-
-    <div class="header-text mb-2">
-      <h2>Do you want to register?</h2>
-      <p>We are going to make you new on the platform. Please fill in all required fields</p>
-    </div>
-
-    <div class="input-group flex-nowrap mb-3">
-      
-      <span class="input-group-text" id="addon-wrapping">
-        <i class="bi bi-people"></i>
-      </span>
-      
-      <input type="text" class="form-control" 
-        placeholder="Clinic name" 
-        aria-label="Clinic name" 
-        aria-describedby="addon-wrapping"
-        [(ngModel)] = "clinic.name" name = "name">
-    
-      </div>
-
-    <div class="input-group flex-nowrap mb-3">
-    
-      <span class="input-group-text" id="addon-wrapping">
-        <i class="bi bi-unlock"></i>
-      </span>
-    
-      <input type="password" class="form-control" 
-        placeholder="Access password" 
-        aria-label="Access password" 
-        aria-describedby="addon-wrapping"
-        [(ngModel)] = "clinic.password" name = "password">
-    
-      </div>
-
-    <div class = "d-grid gap-2 col-6 mx-auto mt-3" >
-
-      <button type="button" 
-        class="btn btn-primary btn-sm"
-        (click) = "registerClinic()" >
-        All set, create this clinic!</button>
-    
-    </div>
-
-  </ng-template>
-
-  <ng-template #topText>
-
-    <div class = "d-grid gap-2 d-md-flex justify-content-md-end mb-3">
-          
-      <p style="color: gray">Already have an account?</p>
-      
-      <button type="button" 
-        (click) = "whatSee = !whatSee" 
-        class="btn btn-outline-primary rounded-4 btn-sm mb-3">Sign In</button>
-    
-    </div>
-
-  </ng-template>
   
 </body>
 </html>

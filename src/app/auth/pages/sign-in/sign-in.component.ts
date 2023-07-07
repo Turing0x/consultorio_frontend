@@ -1,25 +1,28 @@
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component } from '@angular/core';
-import { LoginService } from './login.services';
+
+import { LoginService } from '../login.services';
+import { Clinic } from 'src/data/clinic/clinic';
 import swal from 'sweetalert2';
 
-import { Clinic } from 'src/data/clinic/clinic';
-import { ActivatedRoute, Router } from '@angular/router';
-
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'sign-in-page',
+  templateUrl: './sign-in.component.html',
+  styleUrls: ['./sign-in.component.css']
 })
-export class LoginComponent {
+export class SignInComponent {
 
   clinic: Clinic = new Clinic()  
-  whatSee: boolean = true;
 
   constructor(
     private loginService: LoginService,
     private router: Router,
     private activatedRoute: ActivatedRoute
   ){}
+
+  navigateTo( route: string ){
+    this.router.navigate([route]);
+  }
 
   public makeLogin(): void{
     this.loginService.signIn(this.clinic).subscribe(
@@ -36,20 +39,6 @@ export class LoginComponent {
         this.router.navigate(['/dashboard'], 
           { relativeTo: this.activatedRoute })
 
-      }
-    )
-  }
-
-  public registerClinic(): void{
-    this.loginService.registerClinic(this.clinic).subscribe(
-      cli => {
-        this.whatSee = !this.whatSee
-        this.clinic = cli
-        swal.fire(
-          'Action completed!',
-          `The clinic has been successfully registered!`,
-          'success'
-        )
       }
     )
   }
