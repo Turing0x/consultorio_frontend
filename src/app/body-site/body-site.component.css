@@ -1,0 +1,8 @@
+.main{
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 300px;
+  min-height: 100vh;
+  background: #fff;
+  transition: .5s;
+}
