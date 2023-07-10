@@ -1,10 +1,8 @@
 import { RouterModule, Routes } from "@angular/router";
-import { DashboardComponent } from "./dashboard/dashboard.component";
-import { LoginComponent } from "./auth/pages/login/login.component";
+import { SignInComponent } from "./auth/pages/sign-in/sign-in.component";
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
-  { path: 'dashboard', component: DashboardComponent },
+  { path: '', component: SignInComponent },
 ]
 
 export const routing = RouterModule.forRoot(routes);
