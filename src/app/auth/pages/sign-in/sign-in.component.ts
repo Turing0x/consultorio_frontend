@@ -36,7 +36,7 @@ export class SignInComponent {
 
         swal.fire( 'Action completed!', 
         `You have successfully logged in!`, 'success')
-        this.router.navigate(['/dashboard'], 
+        this.router.navigate(['/users'], 
           { relativeTo: this.activatedRoute })
 
       }
