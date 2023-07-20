@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { LoginService } from '../login.services';
-import { Clinic } from 'src/data/clinic/clinic';
+import { Clinic } from 'src/data/clinic';
 import swal from 'sweetalert2';
 import { Router } from '@angular/router';
 

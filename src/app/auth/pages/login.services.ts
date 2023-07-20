@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
-import { Clinic } from 'src/data/clinic/clinic';
+import { Clinic } from 'src/data/clinic';
 
 @Injectable()
 export class LoginService{

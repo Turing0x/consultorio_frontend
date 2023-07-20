@@ -8,6 +8,12 @@ const routes: Routes = [
       import('./auth/auth.module')
         .then( m => m.AuthModule )
   },
+  { 
+    path: 'person',
+    loadChildren: () => 
+      import('./user-manager/person.module')
+        .then( m => m.PersonModule )
+  },
   {
     path: '**', redirectTo: 'auth'
   }

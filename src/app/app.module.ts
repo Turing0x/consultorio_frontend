@@ -7,12 +7,11 @@ import { LoginService } from './auth/pages/login.services';
 import { AppRoutingModule } from './app-routing.module';
 import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
-import { UserManagerComponent } from './user-manager/user-manager.component';
+import { UserManagerComponent } from './user-manager/user-manager/user-manager.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserManagerComponent,
   ],
   imports: [
     CommonModule,

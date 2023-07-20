@@ -2,7 +2,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Component } from '@angular/core';
 
 import { LoginService } from '../login.services';
-import { Clinic } from 'src/data/clinic/clinic';
+import { Clinic } from 'src/data/clinic';
 import swal from 'sweetalert2';
 
 @Component({
@@ -36,7 +36,7 @@ export class SignInComponent {
 
         swal.fire( 'Action completed!', 
         `You have successfully logged in!`, 'success')
-        this.router.navigate(['/users'], 
+        this.router.navigate(['/person/listcomplete'], 
           { relativeTo: this.activatedRoute })
 
       }
