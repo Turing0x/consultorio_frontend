@@ -1,7 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, catchError, throwError } from 'rxjs';
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
 import { Clinic } from 'src/data/clinic';

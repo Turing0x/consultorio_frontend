@@ -1,3 +1,114 @@
-<p>details-edit-form works!</p>
+<div class="main_container container ">
 
-<p>{{person.name}}</p>
+  <div class="top_container container mt-5 d-flex d-row">
+
+    <!---------------------Picture box -------------------------------------->
+    <div class="featured-image mb-3">
+          
+      <img class="img-fluid"
+        src="../../../../assets/images/person_picture.png" 
+        style="width: 300px;">
+
+    </div>
+
+    <div class="container d-column mt-3">
+  
+      <div class="container d-flex d-row" >
+        
+        <h3 class = "persona_name" >{{person.name}}</h3>
+        
+        <i class="bi bi-gender-male" *ngIf="person.sex === 'Male'; else femaleGender"></i>
+        <ng-template #femaleGender>
+          <i class="bi bi-gender-female"></i>
+        </ng-template>
+          
+        {{person.sex}}
+
+        <button class = " btn_edit btn btn-primary btn-sm border-0" >
+          <i class="bi bi-pencil-square"></i>
+          Let's edit!!!
+        </button>
+      
+      </div>
+
+      <p class = "occupation" >{{person.occupation}}</p>
+
+      <div class=" info_container container d-flex d-row">
+
+        <div class="basic_info container">
+
+          <p style="color: gray;" >Basic Information</p>
+
+          
+  
+          <div class="container d-flex d-row ">
+            
+            <p style = "font-weight: 500;" >Identity card: &#160;</p>
+
+            <p style = "color: blue;" > {{person.ci}} </p>
+  
+          </div>
+  
+          <div class="container d-flex d-row ">
+            
+            <p style = "font-weight: 500;" >Birthdate: &#160;</p>
+  
+            <p style = "color: blue;" > {{person.birthdate}} </p>
+  
+          </div>
+  
+          <div class="container d-flex d-row ">
+            
+            <p style = "font-weight: 500;" >Age: &#160;</p>
+  
+            <p style = "color: blue;" > {{person.age}} </p>
+  
+          </div>
+  
+        </div>
+  
+        <div class="contact_info container">
+  
+          <p style="color: gray;" >Contact Information</p>
+  
+          <div class="container d-flex d-row ">
+            
+            <p style = "font-weight: 500;" >Phone number: &#160;</p>
+  
+            <p style = "color: blue;" > +53 58-88-48-00 </p>
+  
+          </div>
+  
+          <div class="container d-flex d-row ">
+            
+            <p style = "font-weight: 500;" >Address: &#160;</p>
+  
+            <p style = "color: blue;" > Avenida 91 #7227 e/ 72 y 74. Guanajay, Artemisa </p>
+  
+          </div>
+  
+          <div class="container d-flex d-row ">
+            
+            <p style = "font-weight: 500;" >E-mail: &#160;</p>
+  
+            <p style = "color: blue;" > rauligf97@gmail.com </p>
+  
+          </div>
+  
+        </div>
+
+      </div>
+
+      <div class="container mt-5">
+
+        <p style="color: gray;" >Medical Information</p>
+
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, minus iusto enim accusantium quaerat odit, veritatis beatae consequatur vitae ea nemo eos aspernatur quae debitis tempore aut quibusdam architecto autem!</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
